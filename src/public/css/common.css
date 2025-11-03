@@ -1,0 +1,16 @@
+.header {
+    background: #fff;
+    border-bottom: 1px solid #cccccc;
+}
+
+.header__inner {
+    text-align: center;
+    padding: 20px 15px;
+}
+
+.header__logo {
+    color: #716b65;
+    text-decoration: none;
+    font-family: "Zen Old Mincho", serif;
+    font-size: 30px;
+}
