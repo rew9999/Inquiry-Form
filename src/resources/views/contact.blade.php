@@ -110,7 +110,6 @@
             <div class="form__group-content">
                 <div class="form__input--select">
                     <select name="category_id" required>
-                        <!-- <option value="" disabled {{ old('category_id', $inputs['category_id'] ?? '') == '' ? 'selected' : '' }}>選択してください</option> -->
                         <option value="" disabled selected>選択してください</option>
                         @foreach($categories as $category)
                         <option value="{{ $category->id }}" {{ old('category_id', $inputs['category_id'] ?? ''

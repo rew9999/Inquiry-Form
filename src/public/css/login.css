@@ -1,0 +1,90 @@
+body {
+    background-color: #d7d6d5;
+}
+
+.login-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.login-page__header {
+    margin-bottom: 40px;
+}
+
+.login-page__title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #716b65;
+    text-align: center;
+    font-family: "Zen Old Mincho", serif;
+}
+
+.login-page__form {
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-label {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #8B7355;
+}
+
+.form-input::placeholder {
+    color: #999;
+}
+
+.form-error {
+    color: #d9534f;
+    font-size: 12px;
+}
+
+.form-actions {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.login-button {
+    display: inline-block;
+    align-items: center;
+    width: 100px;
+    padding: 12px;
+    background-color: #8B7355;
+    color: white;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #6F5B47;
+}

@@ -47,34 +47,18 @@
     <div class="button-group">
         <form method="POST" action="{{ route('store') }}" class="submit-form">
             @csrf
-            <input type="hidden" name="last_name" value="{{ $validated['last_name'] }}">
-            <input type="hidden" name="first_name" value="{{ $validated['first_name'] }}">
-            <input type="hidden" name="gender" value="{{ $validated['gender'] }}">
-            <input type="hidden" name="email" value="{{ $validated['email'] }}">
-            <input type="hidden" name="tel_part1" value="{{ $validated['tel_part1'] }}">
-            <input type="hidden" name="tel_part2" value="{{ $validated['tel_part2'] }}">
-            <input type="hidden" name="tel_part3" value="{{ $validated['tel_part3'] }}">
-            <input type="hidden" name="address" value="{{ $validated['address'] }}">
-            <input type="hidden" name="building" value="{{ $validated['building'] }}">
-            <input type="hidden" name="category_id" value="{{ $validated['category_id'] }}">
-            <input type="hidden" name="detail" value="{{ $validated['detail'] }}">
+            @foreach(['last_name', 'first_name', 'gender', 'email', 'tel_part1', 'tel_part2', 'tel_part3', 'address', 'building', 'category_id', 'detail'] as $field)
+                <input type="hidden" name="{{ $field }}" value="{{ $validated[$field] ?? '' }}">
+            @endforeach
 
             <button type="submit" class="btn btn-submit">送信</button>
         </form>
 
         <form method="POST" action="{{ route('index') }}" class="back-form">
             @csrf
-            <input type="hidden" name="last_name" value="{{ $validated['last_name'] }}">
-            <input type="hidden" name="first_name" value="{{ $validated['first_name'] }}">
-            <input type="hidden" name="gender" value="{{ $validated['gender'] }}">
-            <input type="hidden" name="email" value="{{ $validated['email'] }}">
-            <input type="hidden" name="tel_part1" value="{{ $validated['tel_part1'] }}">
-            <input type="hidden" name="tel_part2" value="{{ $validated['tel_part2'] }}">
-            <input type="hidden" name="tel_part3" value="{{ $validated['tel_part3'] }}">
-            <input type="hidden" name="address" value="{{ $validated['address'] }}">
-            <input type="hidden" name="building" value="{{ $validated['building'] }}">
-            <input type="hidden" name="category_id" value="{{ $validated['category_id'] }}">
-            <input type="hidden" name="detail" value="{{ $validated['detail'] }}">
+            @foreach(['last_name', 'first_name', 'gender', 'email', 'tel_part1', 'tel_part2', 'tel_part3', 'address', 'building', 'category_id', 'detail'] as $field)
+                <input type="hidden" name="{{ $field }}" value="{{ $validated[$field] ?? '' }}">
+            @endforeach
 
             <button type="submit" class="btn btn-back">修正</button>
         </form>

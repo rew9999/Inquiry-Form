@@ -4,8 +4,11 @@
 }
 
 .header__inner {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px 15px;
+    position: relative;
 }
 
 .header__logo {
@@ -13,4 +16,30 @@
     text-decoration: none;
     font-family: "Zen Old Mincho", serif;
     font-size: 30px;
+}
+
+.header-button {
+    position: absolute;
+    right: 15px;
+    padding: 8px 20px;
+    background-color: #8B7355;
+    color: white;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: background-color 0.3s;
+}
+
+.header-button:hover {
+    background-color: #6F5B47;
+}
+
+.header-form {
+    position: absolute;
+    right: 15px;
+    margin: 0;
+    display: flex;
+    align-items: center;
 }
