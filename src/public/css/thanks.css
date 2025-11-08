@@ -1,0 +1,57 @@
+.thanks__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 40px 20px;
+    background-color: #ffffff;
+}
+
+.thanks__background {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 400px;
+    color: rgba(0, 0, 0, 0.03);
+    white-space: nowrap;
+    font-family: "Zen Old Mincho", serif;
+}
+
+.thanks__message {
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.thanks__message p {
+    font-size: 30px;
+    color: #333;
+    margin: 0;
+}
+
+.thanks__button {
+    position: relative;
+}
+
+.btn-home {
+    display: inline-block;
+    background-color: #8b7355;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 60px;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+.btn-home:hover {
+    background-color: #6d5a44;
+}
+
+.btn-home:active {
+    background-color: #5a4936;
+}
