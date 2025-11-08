@@ -26,5 +26,6 @@ Route::get('/admin', [AdminController::class, 'admin']);
 Route::get('/search', [AdminController::class, 'search']);
 Route::get('/reset', [AdminController::class, 'reset']);
 Route::post('/delete', [AdminController::class, 'delete']);
+Route::get('/export', [AdminController::class, 'export']);
 
 Route::post('/logout', [AuthController::class, 'logout']);

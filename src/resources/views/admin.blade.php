@@ -34,7 +34,7 @@
     </div>
 
     <div class="admin-page__actions">
-        <button class="export-button">エクスポート</button>
+        <a href="/export?keyword={{ request('keyword') }}&gender={{ request('gender') }}&category_id={{ request('category_id') }}&date={{ request('date') }}" class="export-button">エクスポート</a>
         {{ $contacts->links('vendor.pagination.custom') }}
     </div>
 

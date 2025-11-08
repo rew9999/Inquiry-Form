@@ -90,6 +90,8 @@
     cursor: pointer;
     font-size: 14px;
     transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .export-button:hover {
