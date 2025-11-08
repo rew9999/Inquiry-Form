@@ -35,3 +35,4 @@
 ```
 
 ### ER図
+https://github.com/rew9999/Inquiry-Form/issues/3#issue-3603596285
