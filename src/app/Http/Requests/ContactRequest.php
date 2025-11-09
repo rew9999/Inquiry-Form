@@ -31,7 +31,7 @@ class ContactRequest extends FormRequest
             'email' => 'required|email|max:255',
             'tel_part1' => 'required|numeric|max:5',
             'tel_part2' => 'required|numeric|max:5',
-            'tel_part3' => 'required|numeric|max::5',
+            'tel_part3' => 'required|numeric|max:5',
             'address' => 'required|string|max:255',
             'building' => 'nullable|string|max:255',
             'detail' => 'required|string|max:120',

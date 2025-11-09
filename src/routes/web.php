@@ -22,10 +22,11 @@ Route::post('/confirm', [ContactController::class, 'confirm'])->name('confirm');
 Route::post('/store', [ContactController::class, 'store'])->name('store');
 Route::get('/thanks', [ContactController::class, 'thanks'])->name('thanks');
 
-Route::get('/admin', [AdminController::class, 'admin']);
-Route::get('/search', [AdminController::class, 'search']);
-Route::get('/reset', [AdminController::class, 'reset']);
-Route::post('/delete', [AdminController::class, 'delete']);
-Route::get('/export', [AdminController::class, 'export']);
-
-Route::post('/logout', [AuthController::class, 'logout']);
+Route::middleware('auth')->group(function () {
+    Route::get('/admin', [AdminController::class, 'admin']);
+    Route::get('/search', [AdminController::class, 'search']);
+    Route::get('/reset', [AdminController::class, 'reset']);
+    Route::post('/delete', [AdminController::class, 'delete']);
+    Route::get('/export', [AdminController::class, 'export']);
+    Route::post('/logout', [AuthController::class, 'logout']);
+});
