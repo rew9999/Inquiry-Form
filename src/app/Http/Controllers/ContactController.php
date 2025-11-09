@@ -14,7 +14,6 @@ class ContactController extends Controller
         $categories = Category::all();
         $genders = Contact::GENDERS;
 
-        // 確認画面から戻ってきた場合のデータを保持
         $inputs = $request->all();
 
         return view('contact', compact('categories', 'genders', 'inputs'));

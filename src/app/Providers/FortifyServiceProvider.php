@@ -41,6 +41,37 @@ class FortifyServiceProvider extends ServiceProvider
             return view('login');
         });
 
+        Fortify::authenticateUsing(function (Request $request) {
+            $validator = \Illuminate\Support\Facades\Validator::make($request->all(), [
+                'email' => ['required', 'email'],
+                'password' => ['required'],
+            ], [
+                'email.required' => 'メールアドレスを入力してください',
+                'email.email' => 'メールアドレスは「ユーザー名@ドメイン」形式で入力してください',
+                'password.required' => 'パスワードを入力してください',
+            ]);
+
+            if ($validator->fails()) {
+                throw new \Illuminate\Validation\ValidationException($validator);
+            }
+
+            $user = \App\Models\User::where('email', $request->email)->first();
+
+            if (!$user) {
+                throw \Illuminate\Validation\ValidationException::withMessages([
+                    'email' => ['ログイン情報が登録されていません'],
+                ]);
+            }
+
+            if (!\Illuminate\Support\Facades\Hash::check($request->password, $user->password)) {
+                throw \Illuminate\Validation\ValidationException::withMessages([
+                    'password' => ['パスワードに誤りがあります'],
+                ]);
+            }
+
+            return $user;
+        });
+
         RateLimiter::for('login', function (Request $request) {
             $throttleKey = Str::transliterate(Str::lower($request->input(Fortify::username())).'|'.$request->ip());
 
