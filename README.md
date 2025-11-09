@@ -4,7 +4,7 @@
 
 ### Dockerビルド
 ```
-・git clone git@github.com:Estra-Coachtech/laravel-docker-template.git
+・git clone git@github.com:rew9999/Inquiry-Form.git
 ・docker compose up -d --build
 ```
 
