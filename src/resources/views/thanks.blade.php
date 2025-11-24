@@ -8,7 +8,7 @@
 <div class="thanks__content">
     <div class="thanks__background">Thank you</div>
     <div class="thanks__message">
-        <p>お問い合わせありがとうございました</p>
+        <p>お問い合わせありがとうございました!</p>
     </div>
     <div class="thanks__button">
         <a href="{{ route('index') }}" class="btn-home">HOME</a>
